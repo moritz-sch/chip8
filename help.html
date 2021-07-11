@@ -1,0 +1,61 @@
+<html>
+<head>
+  <title>CHIP-8 Interpreter</title>
+</head>
+
+<body style="margin-left:20px; margin-right:20px; margin-top:20px; margin-bottom:50px;">
+  <h1>CHIP-8 Interpreter<h1>
+     <h2 style="margin-left:10px;">Introduction</h2>
+       <p style="margin-left:40px;">A CHIP-8 virtual machine. It runs CHIP-8 programs, not SUPER-CHIP or XO-CHIP programs. Sound is currently not implemented.</p>
+     <h2 style="margin-left:10px;">Controls</h2>
+       <p style="margin-left:40px;">The original computers with CHIP-8 interpreters had a keyboard that looked like this:</p>
+       <table style="margin-left:60px;">
+         <tr>
+           <td>1</td><td>2</td><td>3</td><td>C</td>
+         </tr>
+         <tr>
+           <td>4</td><td>5</td><td>6</td><td>D</td>
+         </tr>
+         <tr>
+           <td>7</td><td>8</td><td>9</td><td>E</td>
+         </tr>
+         <tr>
+           <td>A</td><td>0</td><td>B</td><td>F</td>
+         </tr>
+       </table>
+       <p style="margin-left:40px;">The default setting for this interpreter is a Qwerty keyboard which maps it to the following keys:</p>
+       <table style="margin-left:60px;">
+         <tr>
+           <td>1</td><td>2</td><td>3</td><td>4</td>
+         </tr>
+         <tr>
+           <td>Q</td><td>W</td><td>E</td><td>R</td>
+         </tr>
+         <tr>
+           <td>A</td><td>S</td><td>D</td><td>F</td>
+         </tr>
+         <tr>
+           <td>Z</td><td>X</td><td>C</td><td>V</td>
+         </tr>
+       </table>
+       <p style="margin-left:40px;">The corresponding buttons are used for Qwertz and Azerty layouts (select it from the menu).</p>
+       <p style="margin-left:40px;">Space pauses/unpauses the program.</p>
+       
+     <h2 style="margin-left:10px;">CPU</h2>
+     <p style="margin-left:40px;">There are a few instructions which have been implemented differently in different interpreters. This mostly concerns the shift instructions (8xy6 and 8xye), the read from/write to memory instructions (fx55 and fx65) and the jump with offset instruction (bnnn). Some program may require one or the other implementation of these instructions to work. You can choose them in the CPU menu.</p>
+       
+     <h2 style="margin-left:10px;">Graphics</h2>
+     <p style="margin-left:40px;">Note that the sprite flickering is not a bug but accurate behavior.</p>
+     
+     <h2 style="margin-left:10px;">Debugging</h2>
+     <p style="margin-left:40px;">The interpreter comes with some debugging functionalities.</p>
+     <ul style="margin-left:10px;">
+       <li><b>Print instructions (hotkey p)</b>: prints all executed instructions to terminal while running the interpreter normally.</li>
+       <li><b>Step (hotkey n)</b>: only works when paused. Executes one instruction and prints it to terminal.</li>
+       <li><b>Show registers and memory (hotkey j)</b>: only works when paused. Opens a window with all registers and memory. It is only updated when using step (with or without printing).</li>
+       <li><b>Print registers and memory (hotkey k)</b>: only works when paused. Prints all registers and memory to terminal.</li>
+       <li><b>Step and print registers and memory (hotkey m)</b>: only works when paused. Combines the previous two.</li>
+     </ul>
+
+</body>
+</html>
